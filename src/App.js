@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import TodoList from './components/TodoList';
+
 
 function App() {
+
+  const [dataTodo, setDatatodo] = useState([
+  {
+    title: 'Aprender a crear una ToDo',
+    status: 'Pendiente'
+  },
+  {
+    title: 'Usando la app de My Todo',
+    status: 'En curso'
+  },
+  {
+    title: 'Abrir la app My ToDo',
+    status: 'Completada'
+  }
+]); 
+
+  const [filterBy, setFilterBy] = useState('all');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header dataTodo={dataTodo} filterBy = {filterBy}/>
+      <hr />
+      <TodoList dataTodo={dataTodo}/>
+      <Footer dataTodo={dataTodo}/>
     </div>
   );
 }

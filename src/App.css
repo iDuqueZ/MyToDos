@@ -1,38 +1,288 @@
-.App {
-  text-align: center;
+:root {
+  --gris-oscuro: #A7ADAB;
+  --blanco-gris: #F8F8F8; 
+  --blanco: #FFFF;
+  --gris-oscuro-2: #8D8D8D;
+  --negro-absoluto: #0000;
+  --negro: #363838;
+  --azul: #0C85B9;
+  --rojo: #F66161;
+  --verde: #0CB97B;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease-out 0.4s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  background-color: var(--gris-oscuro-2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin-top: 20px;
+  background-color: var(--blanco-gris);
+  color: var(--negro);
+  height: 96vh;
+}
+
+/* ESTILOS HEADER */
+
+header {
+  width: 90%;
+  margin: auto;
+  padding-top: 25px;
+}
+
+.title{
+  color: var(--negro);
+}
+
+.title h1 .Do{
+  color: var(--verde);
+}
+
+.title h1 b:nth-child(2){
+  color: var(--rojo);
+}
+
+.title h1 b:nth-child(3){
+  color: var(--azul);
+}
+
+.title h1 b:nth-child(4){
+  color: var(--gris-oscuro-2);
+}
+
+/* ESTILOS SEARCH */
+
+.searchTodo {
+  margin: 20px 0;
+  padding: 5px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gris-oscuro-2);
+}
+
+.search-input {
+  width: 90%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+/* ESTILOS FILTRO */
+
+.filter {
+  color: var(--gris-oscuro-2);
+}
+
+.filter-icon {
+  cursor: pointer;
+}
+
+.filter-menu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-list{
+  padding: 10px 0;
+}
+
+.filter-component{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--negro);
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+  /* border: 1px solid var(--negro); */
+}
+
+.filter-component label {
+  padding: 10px 15px;
+  color: var(--blanco);
+  cursor: pointer;
+}
+
+.filter-component span {
+  padding: 10px 15px;
+  width: 60px;
+  text-align: center;
+  background-color: var(--blanco);
+  color: var(--negro);
+  border: 1px solid var(--rojo);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.pendiente  {background-color: var(--rojo);} 
+.en-curso   {background-color: var(--azul);}
+.completada {background-color: var(--verde);}
+.todas      {background-color: var(--gris-oscuro-2);}
+
+.pendiente  span    {border-color: var(--rojo);}
+.en-curso   span    {border-color: var(--azul);}
+.completada span    {border-color: var(--verde);}
+.todas      span    {border-color: var(--gris-oscuro-2);}
+
+
+/* LINEA DIVISORA */
+
+hr {
+  width: 50%;
+  margin: auto;
+}
+
+/* To-Dos */
+
+.todo-list {
+  width: 90%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.todo-container {
+  background-color: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border-left: 3px solid var(--rojo);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.todo-header h2 {
+  font-size: 20px;
+  min-height: 60px;
+  width: 90%;
+}
+
+.todo-icon{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-options{
+  padding: 15px 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-options button {
+  padding: 5px 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-options button:hover{
+  color: var(--blanco);
+}
+
+.todo-options-enCurso     {color: var(--azul); border: 1px solid var(--azul);}
+.todo-options-completado  {color: var(--verde); border: 1px solid var(--verde);}
+.todo-options-pendiente   {color: var(--rojo); border: 1px solid var(--rojo);}
+
+.todo-options-enCurso:hover {
+  background-color: var(--azul)
+}
+
+.todo-options-completado:hover {
+  background-color: var(--verde)
+}
+.todo-options-pendiente:hover {
+  background-color: var(--rojo)
+}
+
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: var(--blanco);
+}
+
+footer .btn-new {
+  width: 100%;
+  text-align: center;
+  padding: 13px 0px;
+  background-color: var(--verde);
+  border: none;
+  color: var(--blanco);
+  font-size: 14px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+footer button b {
+  font-size: 20px;
+}
+
+footer button:hover{
+  border: 1px solid var(--verde);
+  background-color: var(--blanco);
+  color: var(--verde);
+}
+
+.todo-new {
+  width: 100%;
+  padding: 30px 20px;
+  border: 1px solid var(--verde);
+  border-bottom: none;
+  border-top: none;
+}
+
+.todo-new textarea {
+  resize: none;
+  width: 100%;
+  height: 80px;
+  outline: none;
+  border: 1px solid;
+  border-color: var(--gris-oscuro-2);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.todo-new-buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.todo-new button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  margin-left: 10px;
+  background-color: transparent;
+  border: 1px solid var(--gris-oscuro-2);
+  border-radius: 5px;
+}
+
+.todo-new .save {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+.todo-new .save:hover{
+  background-color: #116647;
+}
+
+.todo-new .cancel {
+  color: var(--gris-oscuro-2);
+}
+
+.inactive{
+  display: none;
+}
+
+.hidden {
+  margin-bottom: -183px;
 }
