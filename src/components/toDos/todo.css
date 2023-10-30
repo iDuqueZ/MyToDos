@@ -1,0 +1,83 @@
+/* To-Dos */
+
+.todo-list {
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+  }
+  
+  .todo-container {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+  }
+  
+  .todo-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-left: 3px solid var(--rojo);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  .status-Pendiente{
+    border-left: 3px solid var(--rojo);
+  }
+  
+  .status-Encurso{
+    border-left: 3px solid var(--azul);
+  }
+  
+  .status-Completada{
+    text-decoration:line-through;
+    border-left: 3px solid var(--verde);
+  }
+  
+  .todo-header h2 {
+    font-size: 20px;
+    min-height: 60px;
+    width: 90%;
+  }
+  
+  .todo-icon{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .todo-options{
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .todo-options button {
+    padding: 5px 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .todo-options button:hover{
+    color: var(--blanco);
+  }
+  
+  .todo-options-enCurso     {color: var(--azul); border: 1px solid var(--azul);}
+  .todo-options-completado  {color: var(--verde); border: 1px solid var(--verde);}
+  .todo-options-pendiente   {color: var(--rojo); border: 1px solid var(--rojo);}
+  .todo-options-delete      {color: var(--gris-oscuro-2); border: 1px solid var(--gris-oscuro-2);}
+  
+  .todo-options-enCurso:hover {
+    background-color: var(--azul)
+  }
+  .todo-options-completado:hover {
+    background-color: var(--verde)
+  }
+  .todo-options-pendiente:hover {
+    background-color: var(--rojo)
+  }
+  .todo-options-delete:hover {
+    background-color: var(--gris-oscuro-2)
+  }

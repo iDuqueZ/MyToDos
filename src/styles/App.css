@@ -1,0 +1,37 @@
+:root {
+  --gris-oscuro: #A7ADAB;
+  --blanco-gris: #F8F8F8; 
+  --blanco: #FFFF;
+  --gris-oscuro-2: #8D8D8D;
+  --negro-absoluto: #0000;
+  --negro: #363838;
+  --azul: #0C85B9;
+  --rojo: #F66161;
+  --verde: #0CB97B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease-out 0.4s;
+}
+
+html {
+  background-color: var(--gris-oscuro-2);
+}
+
+body {
+  margin-top: 20px;
+  background-color: var(--blanco-gris);
+  color: var(--negro);
+  height: 96vh;
+}
+
+
+/* LINEA DIVISORA */
+
+hr {
+  width: 50%;
+  margin: auto;
+}

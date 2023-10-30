@@ -1,0 +1,56 @@
+/* ESTILOS FILTRO */
+
+.filter {
+    color: var(--gris-oscuro-2);
+  }
+  
+  .filter-icon {
+    cursor: pointer;
+  }
+  
+  .filter-menu{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .filter-list{
+    padding: 10px 0;
+  }
+  
+  .filter-component{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--negro);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    /* border: 1px solid var(--negro); */
+  }
+  
+  .filter-component label {
+    padding: 10px 15px;
+    color: var(--blanco);
+    cursor: pointer;
+  }
+  
+  .filter-component span {
+    padding: 10px 15px;
+    width: 60px;
+    text-align: center;
+    background-color: var(--blanco);
+    color: var(--negro);
+    border: 1px solid var(--rojo);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .pendiente  {background-color: var(--rojo);} 
+  .en-curso   {background-color: var(--azul);}
+  .completada {background-color: var(--verde);}
+  .todas      {background-color: var(--gris-oscuro-2);}
+  
+  .pendiente  span    {border-color: var(--rojo);}
+  .en-curso   span    {border-color: var(--azul);}
+  .completada span    {border-color: var(--verde);}
+  .todas      span    {border-color: var(--gris-oscuro-2);}
+  

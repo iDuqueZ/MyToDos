@@ -1,0 +1,16 @@
+/* ESTILOS SEARCH */
+
+.searchTodo {
+    margin: 20px 0;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gris-oscuro-2);
+  }
+  
+  .search-input {
+    width: 90%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }

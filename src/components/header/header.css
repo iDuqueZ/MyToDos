@@ -1,0 +1,27 @@
+/* ESTILOS HEADER */
+
+header {
+    width: 90%;
+    margin: auto;
+    padding-top: 25px;
+  }
+  
+  .title{
+    color: var(--negro);
+  }
+  
+  .title h1 .Do{
+    color: var(--verde);
+  }
+  
+  .title h1 b:nth-child(2){
+    color: var(--rojo);
+  }
+  
+  .title h1 b:nth-child(3){
+    color: var(--azul);
+  }
+  
+  .title h1 b:nth-child(4){
+    color: var(--gris-oscuro-2);
+  }
