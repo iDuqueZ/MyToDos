@@ -1,56 +1,61 @@
 import React from 'react';
-import { useState } from 'react';
 import './filter.css';
+import { useTodoContext } from '../context';
 
-export default function Filter({ dataTodo, filterBy, setFilterBy }) {
+export default function Filter() {
 
-    const countTodos = dataTodo.length;
+    const { countTodos, toggleFilter, handleFilter, filterOpacity, dataTodo } = useTodoContext();
 
-    const [filterOpacity, setFilterOpacity] = useState({
-        pendiente: 0.5,
-        encurso: 0.5,
-        completada: 0.5,
-        todas: 0.5,
-    });
 
-    const handleFilter = (filter) => {
 
-        // Restablecer la opacidad de todos los elementos
-        const newFilterOpacity = {
-            pendiente: 0.5,
-            encurso: 0.5,
-            completada: 0.5,
-            todas: 0.5,
-        };
 
-        if (filter === 'all') {
-            for (const key in newFilterOpacity) {
-                newFilterOpacity[key] = 1;
-            }
-        } else {
-            // Establecer la opacidad a 1 solo para el elemento seleccionado
-            newFilterOpacity[filter.toLowerCase()] = 1;
-        }
+    // const countTodos = dataTodo.length;
 
-        setFilterBy(filter);
-        setFilterOpacity(newFilterOpacity);
-    };
+    // const [filterOpacity, setFilterOpacity] = useState({
+    //     pendiente: 0.5,
+    //     encurso: 0.5,
+    //     completada: 0.5,
+    //     todas: 0.5,
+    // });
 
-    const toggleFilter = () => {
-        const filterList = document.querySelector('.filter-list');
-        const filterIcon = document.querySelector('.filter-icon svg path');
+    // const handleFilter = (filter) => {
 
-        if (filterList.classList.contains("inactive")) {
-            filterIcon.setAttribute('fill', '#0CB97B') //verde
-            filterList.classList.remove("inactive");
-        } else {
-            if (filterBy === 'all') {
-                filterIcon.setAttribute('fill', '#A7ADAB') //gris
-            }
-            filterList.classList.add("inactive");
-        }
+    //     // Restablecer la opacidad de todos los elementos
+    //     const newFilterOpacity = {
+    //         pendiente: 0.5,
+    //         encurso: 0.5,
+    //         completada: 0.5,
+    //         todas: 0.5,
+    //     };
 
-    }
+    //     if (filter === 'all') {
+    //         for (const key in newFilterOpacity) {
+    //             newFilterOpacity[key] = 1;
+    //         }
+    //     } else {
+    //         // Establecer la opacidad a 1 solo para el elemento seleccionado
+    //         newFilterOpacity[filter.toLowerCase()] = 1;
+    //     }
+
+    //     setFilterBy(filter);
+    //     setFilterOpacity(newFilterOpacity);
+    // };
+
+    // const toggleFilter = () => {
+    //     const filterList = document.querySelector('.filter-list');
+    //     const filterIcon = document.querySelector('.filter-icon svg path');
+
+    //     if (filterList.classList.contains("inactive")) {
+    //         filterIcon.setAttribute('fill', '#0CB97B') //verde
+    //         filterList.classList.remove("inactive");
+    //     } else {
+    //         if (filterBy === 'all') {
+    //             filterIcon.setAttribute('fill', '#A7ADAB') //gris
+    //         }
+    //         filterList.classList.add("inactive");
+    //     }
+
+    // }
 
     return (
         <div className='filter'>

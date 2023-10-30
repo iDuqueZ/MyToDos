@@ -1,7 +1,11 @@
 import React from 'react'
-import './searchBar.css'
+import './searchBar.css';
+import { useTodoContext } from '../context';
 
-export default function SearchBar({setSearchTodo}) {
+export default function SearchBar() {
+
+    const {setSearchTodo} = useTodoContext();
+
     return (
         <div className='searchTodo'>
             <input

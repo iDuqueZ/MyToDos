@@ -22,7 +22,7 @@ footer {
     font-size: 20px;
   }
   
-  footer button:hover{
+  footer button:focus{
     border: 1px solid var(--verde);
     background-color: var(--blanco);
     color: var(--verde);
@@ -79,9 +79,6 @@ footer {
     list-style: none;
   }
   
-  .inactive{
-    display: none;
-  }
   
   .hidden {
     margin-bottom: -183px;

@@ -1,8 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useTodoContext } from "../context";
 
-export default function TodoContainer({ title, status, dataTodo, setDatatodo }) {
-    
+export default function TodoContainer({ title, status }) {
+
     const [headerClass, setHeaderClass] = useState("todo-header");
 
     useEffect(() => {
@@ -10,36 +11,21 @@ export default function TodoContainer({ title, status, dataTodo, setDatatodo }) 
         setHeaderClass("todo-header " + classStatus);
     }, [status]);
 
-    // Función para mostrar el menú de opciones de cada ToDo
-    const handleMenu = (e) => {
-        const menu = e.parentNode.parentNode.querySelector('.todo-options');
-        const icon = e.parentNode.querySelector('.todo-icon svg path');
-
-        if (menu.classList.contains("inactive")) {
-            icon.setAttribute('fill', '#0CB97B') //verde
-            icon.style.transform = 'rotate(180deg)';
-            icon.style.transformOrigin = 'center';
-            menu.classList.remove("inactive");
-        } else {
-            icon.style.transform = 'rotate(0deg)';
-            icon.setAttribute('fill', '#A7ADAB') //gris
-            menu.classList.add("inactive");
-        }
-    };
+    const { handleMenu, dataTodo, setDataTodo } = useTodoContext();
 
     // Función para cambiar el estado de cada ToDo
     const changeStatus = (newStatus) => {
         const newTodo = [...dataTodo];
         const todo = newTodo.findIndex((todo) => todo.title === title);
         newTodo[todo].status = newStatus;
-        setDatatodo(newTodo);
+        setDataTodo(newTodo);
     }
 
     const deleteTodo = () => {
         const newTodo = [...dataTodo];
         const todo = newTodo.findIndex((todo) => todo.title === title);
         newTodo.splice(todo, 1);
-        setDatatodo(newTodo);
+        setDataTodo(newTodo);
     }
 
     return (
