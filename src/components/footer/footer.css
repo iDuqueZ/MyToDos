@@ -34,6 +34,7 @@ footer {
     border: 1px solid var(--verde);
     border-bottom: none;
     border-top: none;
+    background-color: var(--blanco);
   }
   
   .todo-new textarea {

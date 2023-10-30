@@ -17,17 +17,20 @@
   transition: all ease-out 0.4s;
 }
 
-html {
-  background-color: var(--gris-oscuro-2);
-}
-
 body {
   margin-top: 20px;
   background-color: var(--blanco-gris);
   color: var(--negro);
   height: 96vh;
+  width: 60%;
+  margin: auto;
 }
 
+footer {
+  width: 60%;
+  padding: 0 44px;
+  background-color: var(--blanco-gris);
+}
 
 /* LINEA DIVISORA */
 
@@ -38,4 +41,15 @@ hr {
 
 .inactive {
   display: none;
+}
+
+/* Tablets en modo horizontal */
+@media only screen and (max-width: 1024px) {
+  body{
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    padding: 0;
+  }
 }
