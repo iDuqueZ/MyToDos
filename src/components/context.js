@@ -11,7 +11,7 @@ const TodoContextProvider = ({ children }) => {
     const [dataTodo, setDataTodo] = useState(() => {
         const todosFromStorage = window.localStorage.getItem('TODOS_V1');
         if (todosFromStorage) return JSON.parse(todosFromStorage);
-        return [];
+        return [{title: "Jugar Valo con LGC 😗", status: "pendiente"}, {title: "Enviar un audio con arcadas🤮", status: "encurso"}];
     });
     const [filterBy, setFilterBy] = useState('all');
     const [searchTodo, setSearchTodo] = useState('');
